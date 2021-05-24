@@ -38,7 +38,6 @@ p {
   margin: 0 auto;
   padding: 36px 16px;
   overflow: none;
-  border: 1px solid red;
   height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,9 +77,9 @@ p {
 }
 
 .spiderman {
-  width: 150%;
-  -webkit-transform: translate3d(-200px, 0, 0);
-          transform: translate3d(-200px, 0, 0);
+  width: 130%;
+  -webkit-transform: translate3d(-130px, 0, 0);
+          transform: translate3d(-130px, 0, 0);
   overflow: hidden;
 }
 
@@ -215,6 +214,26 @@ p {
   background: linear-gradient(90deg, #0B0C10 24.48%, rgba(11, 12, 16, 0.8) 54.09%, #0C0C10 77.6%);
 }
 
+.bg-loader {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  background: linear-gradient(225deg, #EA1D22 0%, #B31317 100%);
+}
+
 header {
   width: 100%;
   padding-top: 16px;
@@ -247,7 +266,6 @@ header {
 }
 
 .nav-list {
-  border: 1px solid green;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -307,6 +325,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
 }
 
 .nav-social svg {
@@ -343,6 +362,46 @@ header {
     height: 48px;
     background-color: #EDF1F7;
     border-radius: 8px;
+  }
+}
+
+.logo-spiderman {
+  fill: transparent;
+  -webkit-animation: logo-spiderman 12s ease infinite alternate;
+          animation: logo-spiderman 12s ease infinite alternate;
+}
+
+@-webkit-keyframes logo-spiderman {
+  0% {
+    stroke-width: 0;
+    stroke-dasharray: 1 100;
+    fill: transparent;
+  }
+  25% {
+    stroke-width: 1;
+    stroke-dasharray: 100 1;
+    fill: transparent;
+  }
+  60%, 100% {
+    stroke-width: 0.3;
+    fill: #E5E9EF;
+  }
+}
+
+@keyframes logo-spiderman {
+  0% {
+    stroke-width: 0;
+    stroke-dasharray: 1 100;
+    fill: transparent;
+  }
+  25% {
+    stroke-width: 1;
+    stroke-dasharray: 100 1;
+    fill: transparent;
+  }
+  60%, 100% {
+    stroke-width: 0.3;
+    fill: #E5E9EF;
   }
 }
 

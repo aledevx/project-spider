@@ -19,7 +19,6 @@ header {
 }
 
 .nav-list {
-    border: 1px solid green;
     list-style: none;
     display: flex;
 
@@ -73,6 +72,8 @@ header {
 
 .nav-social {
     display: flex;
+    
+    overflow: hidden;
 
     svg{
         cursor: pointer;
